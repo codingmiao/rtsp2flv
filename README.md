@@ -33,3 +33,8 @@ curl http://ip:8080/remove?name=1
 curl http://ip:8080/get
 ```
 返回已添加的rtsp流转换名称列表，以空格分隔
+
+
+# 自己构建镜像
+
+参见[dockerbuilder/readme.md](dockerbuilder/readme.md)
