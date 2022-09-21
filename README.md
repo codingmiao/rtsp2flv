@@ -18,7 +18,7 @@ docker run -tid --name rtsp2flv -v /home/logs/:/mydata/logs/ --publish "0.0.0.0:
 假如我们需要把rtsp流`rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4` ,转换为flv`http://ip:8000/rtsp2flv/1flv.flv`
 ，则在启动容器后，我们只需向容器发送一条restful请求:
 ```shell
-curl http://mycentos7:8080/add?name=1&url=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
+curl http://ip:8080/add?name=1&url=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
 ```
 返回`success`提示则说明添加成功，随后，可在“VLC media player”等工具中验证url`http://ip:8000/rtsp2flv/1flv.flv` 是否可以播放，或者写代码用flv.js等工具来播放(可能需要用nginx转发一下以解决跨域)。
 
